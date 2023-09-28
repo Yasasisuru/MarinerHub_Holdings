@@ -1,0 +1,88 @@
+*{
+    font-family: pippin;
+}
+
+
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar{
+    font-size: 18PX;
+    font-weight: 500PX;
+    background-color: #212529;
+}
+
+
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    
+}
+
+#hero{
+    background: url(../img/back.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+    
+
+    
+
+}
+
+h1{
+    font-size: 80px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+
+h5{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.button{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+   
+}
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.iamg{
+    margin-right: 20px;
+}
+
+.about{
+    font-size: 50px;
+    font-weight: 400;
+    color: #585a5a;
+    
+}
+
+.paragraph{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #888989; 
+}
+
+footer{
+    background-color: #b9b9b9;
+    padding: 20px;
+}
