@@ -4,6 +4,15 @@
 
 
 
+/*        index . html */
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -49,6 +58,7 @@ h5{
     margin-bottom: 20px;
     font-size: 20px;
     font-style: italic;
+   
 }
 
 .button{
@@ -86,3 +96,22 @@ footer{
     background-color: #b9b9b9;
     padding: 20px;
 }
+
+.p11{
+    font-size: 10px;
+    text-align: justify !important;
+}
+
+.list{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.margin{
+    margin: 20px;
+   
+}
+
+/*    form  . css */
+
