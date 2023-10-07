@@ -38,6 +38,7 @@ img{
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
+    
    
     
 
@@ -141,9 +142,14 @@ label{
 }
 
 .btn-save{
-    margin-left: 15px;
+    margin-left: 30px;
 }
 
+.fit{
+     width: 200px;
+     
+  
+}
 
 
 

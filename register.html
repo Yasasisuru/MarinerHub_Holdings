@@ -11,6 +11,9 @@
 </head>
 
 <body class="back-color">
+
+
+
     <!--    navigation bar     -->
     <div class="navbar fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark container ">
@@ -40,7 +43,7 @@
 
         <div class="border border-4 border-dark container  text-start align-items-start">
 
-            <form>
+            <form action="connect.php" method="post">
 
                 <!--  content of form -->
                 <div>
@@ -48,20 +51,28 @@
 
                     <div class="form-group ">
                         <label for="Company">Company Name:</label>
-                        <input type="text" class="form-control" id="Company" placeholder="Company/Organization Name">
+                        <input type="text" class="form-control" id="Company" name="Company"
+                            placeholder="Company/Organization Name">
                     </div>
                     <div class="form-group ">
+                        <label for="imo">IMO Number:</label>
+                        <input type="text" class="form-control" id="imo" name="imo"
+                            placeholder="International Maritime Organization number">
+                    </div>
+
+                    <div class="form-group ">
                         <label for="Person">Contact Person:</label>
-                        <input type="text" class="form-control" id="Person" placeholder="Contact Person Name">
+                        <input type="text" class="form-control" id="Person" name="Person"
+                            placeholder="Contact Person Name">
                     </div>
                     <div class="form-group ">
                         <label for="Email Address">Email Address:</label>
-                        <input type="Email" class="form-control" id="Email" placeholder="Email">
+                        <input type="Email" class="form-control" id="Email" name="Email" placeholder="Email">
                     </div>
 
                     <div class="form-group ">
                         <label for="Phone">Phone Number</label>
-                        <input type="number" class="form-control" id="Phone" placeholder="Phone Number">
+                        <input type="number" class="form-control" id="Phone" name="Phone" placeholder="Phone Number">
                     </div>
                 </div>
 
@@ -72,38 +83,40 @@
 
                     <div class="form-group ">
                         <label for="Vessel Name">Vessel Name:</label>
-                        <input type="text" class="form-control" id="Vessel" placeholder="Vessel Name">
+                        <input type="text" class="form-control" id="Vessel" name="Vessel" placeholder="Vessel Name">
                     </div>
                     <div class="form-group ">
                         <label for="Type of Vessel">Type of Vessel:</label>
-                        <input type="text" class="form-control" id="vessel-type"
+                        <input type="text" class="form-control" id="vessel-type" name="vessel_type"
                             placeholder="Cargo, Passenger, Naval,Tanker, etc.">
                     </div>
                     <div class="form-group ">
                         <label for="Location">Current Location:</label>
-                        <input type="text" class="form-control" id="location" placeholder="Current Location / Port">
+                        <input type="text" class="form-control" id="location" name="location"
+                            placeholder="Current Location / Port">
                     </div>
 
                     <div class="form-group ">
                         <label for="captain">Csaptain name Operator</label>
-                        <input type="txt" class="form-control" id="captain" placeholder="Csaptain / Operator name">
+                        <input type="txt" class="form-control" id="captain" name="captain"
+                            placeholder="Csaptain / Operator name">
                     </div>
 
                     <div class="row col-12">
 
                         <div class="form-group col-4">
                             <label for="Length">Ship's Length</label>
-                            <input type="number" class="form-control" id="length" placeholder="meter">
+                            <input type="number" class="form-control" id="length" name="length" placeholder="meter">
                         </div>
 
                         <div class="form-group col-4">
                             <label for="Width">Ship's Width</label>
-                            <input type="number" class="form-control" id="width" placeholder="meter">
+                            <input type="number" class="form-control" id="width" name="width" placeholder="meter">
                         </div>
 
                         <div class="form-group col-4">
                             <label for="Draft">Ship's Draft</label>
-                            <input type="number" class="form-control" id="Draft" placeholder="meter">
+                            <input type="number" class="form-control" id="Draft" name="Draft" placeholder="meter">
                         </div>
 
                     </div>
@@ -117,13 +130,13 @@
 
                         <div class="form-group ">
                             <label for="repair">Repair Needs:</label>
-                            <input type="text" class="form-control" id="repair"
+                            <input type="text" class="form-control" id="repair" name="repair"
                                 placeholder="Brief Description of Repair Needs">
                         </div>
 
                         <div class="form-group ">
                             <label for="Specific-Areas">Specific Areas of Repair:</label>
-                            <input type="text" class="form-control" id="Specific-Areas"
+                            <input type="text" class="form-control" id="Specific-Areas" name="Specific_Areas"
                                 placeholder="Hull, Engine, Electrical, etc.">
                         </div>
 
@@ -133,25 +146,26 @@
                             <label for="status  text-center">Urgency Level</label>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Emergency
+                                    <input type="radio" class="form-check-input" id="Emergency"
+                                        name="optradio">Emergency
                                 </label>
                             </div>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Priority
+                                    <input type="radio" class="form-check-input" id="Priority" name="optradio">Priority
                                 </label>
                             </div>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" name="optradio">Routine
+                                    <input type="radio" class="form-check-input" id="Routine" name="optradio">Routine
                                 </label>
                             </div>
                         </div>
 
 
 
-                       
-                       
+
+
 
 
 
@@ -167,11 +181,10 @@
 
             <div class="div row col-12  ">
                 <div class="col-8"></div>
+                <input class=" btn btn-danger col-1 btn-save" type="reset">
 
-                <button class=" btn btn-danger col-1 "> Delete </button>
-                <button class=" btn btn-success col-1 btn-save"> save </button>
-                <button class=" btn btn-primary col-1 btn-save"> download </button>
-                
+                <input class=" btn btn-primary col-1 btn-save" type="submit">
+
             </div>
 
 
@@ -185,64 +198,67 @@
 
     <footer class="col-12 text-dark ">
         <div class="container ">
-          <div class="row text-center">
-            <div class="col-3">
-              <h5 class="text-uppercase"> MarinerHub Holdings</h5>
-              <p class=" p-11">For inquiries and communication with MarinerHub Holding,
-                you can reach out through their official contact channels, <br>
-                ensuring a direct and efficient connection <br> for business or informational purposes</p>
+            <div class="row text-center">
+                <div class="col-3">
+                    <h5 class="text-uppercase"> MarinerHub Holdings</h5>
+                    <p class=" p-11">For inquiries and communication with MarinerHub Holding,
+                        you can reach out through their official contact channels, <br>
+                        ensuring a direct and efficient connection <br> for business or informational purposes</p>
+                </div>
+
+                <div class="col-6"></div>
+
+                <div class="col-3 align">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class=" list-unstyled text-start">
+                        <li class="list">
+                            <img src="data/img/house-fill.svg" class="iamg"> No 22/7 Colombo SL
+                        </li>
+                        <li class="list">
+                            <img src="data/img/email.svg" class="iamg"> MarinerHubHoldings@gmail.com
+                        </li>
+                        <li class="list">
+                            <img src="data/img/telephone.svg" class="iamg"> 011 - 2250170
+                        </li>
+                        <li class="list">
+                            <img src="data/img/printer.svg" class="iamg"> 011 - 2250171
+                        </li>
+                    </ul>
+
+
+                </div>
+
             </div>
-    
-            <div class="col-6"></div>
-    
-            <div class="col-3 align">
-              <h5 class="text-uppercase">Contact</h5>
-              <ul class=" list-unstyled text-start">
-                <li class="list">
-                  <img src="data/img/house-fill.svg" class="iamg"> No 22/7 Colombo SL
-                </li>
-                <li class="list">
-                  <img src="data/img/email.svg" class="iamg"> MarinerHubHoldings@gmail.com
-                </li>
-                <li class="list">
-                  <img src="data/img/telephone.svg" class="iamg"> 011 - 2250170
-                </li>
-                <li class="list">
-                  <img src="data/img/printer.svg" class="iamg"> 011 - 2250171
-                </li>
-              </ul>
-    
-    
+
+
+            <!-- Copyright -->
+            <div class="row text-center margin">
+                <div class=" col-4  ">
+                    <img class="fit" src="data/img/logo.png" alt="">
+                </div>
+                <div class=" col-4  ">
+                    © 2020 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">MarinerHub Holdings.com</a>
+                </div>
+
+                <div class=" col-4">
+                    <a href="#"> <img src="data/img/facebook.svg" width="25px" alt="facebook" class="iamg"></a>
+                    <a href="#"> <img src="data/img/google.svg" width="25px" alt="google" class="iamg"></a>
+                    <a href="#"> <img src="data/img/linkedin.svg" width="25px" alt="linkedin" class="iamg"></a>
+                    <a href="#"> <img src="data/img/twitter.svg" width="25px" alt="twitter" class="iamg"></a>
+                    <a href="#"> <img src="data/img/youtube.svg" width="25px" alt="youtube" class="iamg"></a>
+                </div>
+
             </div>
-    
-          </div>
-    
-    
-          <!-- Copyright -->
-          <div class="row text-center margin">
-            <div class=" col-6  ">
-              © 2020 Copyright:
-              <a class="text-dark" href="https://mdbootstrap.com/">MarinerHub Holdings.com</a>
-            </div>
-    
-            <div class=" col-6">
-              <a href="#"> <img src="data/img/facebook.svg" width="25px" alt="facebook" class="iamg" ></a>
-              <a href="#"> <img src="data/img/google.svg" width="25px" alt="google" class="iamg" ></a>
-              <a href="#"> <img src="data/img/linkedin.svg" width="25px" alt="linkedin" class="iamg" ></a>
-              <a href="#"> <img src="data/img/twitter.svg" width="25px" alt="twitter" class="iamg" ></a>
-              <a href="#"> <img src="data/img/youtube.svg" width="25px" alt="youtube" class="iamg" ></a>
-            </div>
-    
-          </div>
-          <!-- Copyright -->
-    
-    
-    
-    
+            <!-- Copyright -->
+
+
+
+
         </div>
-    
-      </footer>
-    
+
+    </footer>
+
 
 </body>
 
