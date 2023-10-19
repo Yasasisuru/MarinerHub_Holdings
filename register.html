@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +59,7 @@
                     <div class="form-group ">
                         <label for="imo">IMO Number:</label>
                         <input type="text" class="form-control" id="imo" name="imo"
-                            placeholder="International Maritime Organization number">
+                            placeholder="International Maritime Organization number" required>
                     </div>
 
                     <div class="form-group ">
@@ -146,18 +148,17 @@
                             <label for="status  text-center">Urgency Level</label>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="Emergency"
-                                        name="optradio">Emergency
+                                    <input type="radio" class="form-check-input"  name="optradio" value="Emergency"/>Emergency
                                 </label>
                             </div>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="Priority" name="optradio">Priority
+                                    <input type="radio" class="form-check-input"  name="optradio" value="Priority" />Priority
                                 </label>
                             </div>
                             <div class="form-check col-4">
                                 <label class="form-check-label">
-                                    <input type="radio" class="form-check-input" id="Routine" name="optradio">Routine
+                                    <input type="radio" class="form-check-input"  name="optradio" value="Routine"/>Routine
                                 </label>
                             </div>
                         </div>
@@ -176,16 +177,18 @@
 
                 </div>
 
+                <div class="div row col-12  ">
+                    <div class="col-8"></div>
+                    <input class=" btn btn-danger col-1 btn-save" type="reset">
+    
+                    <input class=" btn btn-primary col-1 btn-save" type="submit" name="submit">
+    
+                </div>
+
 
             </form>
 
-            <div class="div row col-12  ">
-                <div class="col-8"></div>
-                <input class=" btn btn-danger col-1 btn-save" type="reset">
-
-                <input class=" btn btn-primary col-1 btn-save" type="submit">
-
-            </div>
+           
 
 
         </div>
