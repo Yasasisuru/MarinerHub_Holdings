@@ -28,6 +28,9 @@ $SpecificAreas = $_POST['Specific_Areas'];
 $optradio = $_POST['optradio'];
 
 
+session_start(); // Start the session
+$_SESSION['imoNumber'] = $imo ;
+
 
 $servername = "localhost";
 $username = "root";
@@ -89,5 +92,5 @@ if (mysqli_query($conn, $sql3)) {
 
 mysqli_close($conn);
 
-header("Location:display.html?signup=success");
+header("Location:display.php?signup=success");
 ?>
