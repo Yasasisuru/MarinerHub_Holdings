@@ -1,16 +1,18 @@
 <?php
-
+//  pass the imo numbe 
 session_start();
 if (isset($_SESSION['imoNumber'])) {
     $imoNumber = $_SESSION['imoNumber'];
 
 }
 
+
+//  date and time
+
 date_default_timezone_set('Asia/Kolkata');
 $Date = date('Y - m - d ');
 $Time = date('h : i : s - a');
 
-//  date and time
 
 
 
